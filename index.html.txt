@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Links | Aesthetic Profile</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0f172a; /* Fallback */
+            color: #f8fafc;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Animated Mesh Gradient Background */
+        .bg-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,0.5) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,0.4) 0, transparent 50%);
+            filter: blur(80px);
+        }
+
+        /* Staggered animation delays for link cards */
+        .link-card {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        /* Hide scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen relative flex items-center justify-center p-6 selection:bg-white/30">
+
+    <!-- Background decorative blobs -->
+    <div class="bg-mesh"></div>
+    <div class="fixed top-[-10%] left-[-10%] w-96 h-96 bg-purple-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+    <div class="fixed top-[20%] right-[-10%] w-96 h-96 bg-pink-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-2000"></div>
+    <div class="fixed bottom-[-20%] left-[20%] w-96 h-96 bg-blue-500/20 rounded-full mix-blend-screen filter blur-[100px] animate-blob animation-delay-4000"></div>
+
+    <main class="w-full max-w-md mx-auto relative z-10 flex flex-col items-center animate-fade-in-up">
+        
+        <!-- Profile Header Section -->
+        <div class="flex flex-col items-center mb-10 w-full">
+            <!-- Avatar Slideshow -->
+            <div class="relative w-40 h-40 mb-6 mx-auto animate-float group cursor-pointer z-20">
+                <!-- Glow Background -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-purple-500 to-pink-500 rounded-full blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+                
+                <!-- Image Container -->
+                <div class="relative w-full h-full rounded-full border-4 border-white/20 shadow-2xl overflow-hidden bg-gray-900 group-hover:scale-105 transition-transform duration-300 z-10 flex items-center justify-center">
+                    <img 
+                        src="file_0000000078b87206b4138092f8bcbc81_2.png" 
+                        alt="PRATYUSH KUMAR Pose 1" 
+                        class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 avatar-slide"
+                        style="z-index: 3;"
+                    />
+                    <img 
+                        src="file_0000000092b07206968e4249a9a0c469.png" 
+                        alt="PRATYUSH KUMAR Pose 2" 
+                        class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 avatar-slide"
+                        style="z-index: 1;"
+                    />
+                    <img 
+                        src="file_00000000436871fab7459c555100f183.png" 
+                        alt="PRATYUSH KUMAR Pose 3" 
+                        class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 avatar-slide"
+                        style="z-index: 1;"
+                    />
+                </div>
+            </div>
+            
+            <!-- Name & Bio -->
+            <h1 class="text-3xl font-bold tracking-tight text-white mb-1 flex items-center gap-2 text-center text-balance">
+                PRATYUSH KUMAR
+                <i class="ph-fill ph-check-circle text-blue-400 text-xl" title="Verified"></i>
+            </h1>
+            <h2 class="text-lg font-medium text-purple-400 mb-3 tracking-wide">aka ROMEO</h2>
+            <p class="text-gray-400 text-center text-sm max-w-[280px] font-light leading-relaxed">
+                AI Creator & Prompt Engineer <br> Welcome to my creative universe ✨
+            </p>
+        </div>
+
+        <!-- Links Section -->
+        <div class="w-full space-y-4 flex flex-col" id="links-container">
+            
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/promptwithromeo?igsh=bzdvczZ4ZzdweWZh" target="_blank" rel="noopener noreferrer" 
+               class="link-card group relative flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl hover:bg-white/[0.08] transition-all duration-300 overflow-hidden shadow-lg hover:shadow-pink-500/20 hover:-translate-y-1">
+                <div class="flex items-center space-x-4 z-10">
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-500 transition-colors duration-300">
+                        <i class="ph ph-instagram-logo text-xl text-gray-300 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <span class="font-medium text-gray-200 tracking-wide">Instagram</span>
+                </div>
+                <i class="ph ph-arrow-up-right text-gray-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all z-10"></i>
+                <div class="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out z-0"></div>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com/@romeoailab?si=g8Mk0HVGMWFzlUAD" target="_blank" rel="noopener noreferrer" 
+               class="link-card group relative flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl hover:bg-white/[0.08] transition-all duration-300 overflow-hidden shadow-lg hover:shadow-red-500/20 hover:-translate-y-1">
+                <div class="flex items-center space-x-4 z-10">
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-red-500 transition-colors duration-300">
+                        <i class="ph ph-youtube-logo text-xl text-gray-300 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <span class="font-medium text-gray-200 tracking-wide">YouTube</span>
+                </div>
+                <i class="ph ph-arrow-up-right text-gray-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all z-10"></i>
+                <div class="absolute inset-0 bg-gradient-to-r from-red-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out z-0"></div>
+            </a>
+
+            <!-- Superprofile -->
+            <a href="https://superprofile.bio/promptwithromeo" target="_blank" rel="noopener noreferrer" 
+               class="link-card group relative flex items-center justify-between p-4 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-xl hover:bg-white/[0.08] transition-all duration-300 overflow-hidden shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1">
+                <div class="flex items-center space-x-4 z-10">
+                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
+                        <i class="ph ph-lightning text-xl text-gray-300 group-hover:text-white transition-colors"></i>
+                    </div>
+                    <span class="font-medium text-gray-200 tracking-wide">Superprofile</span>
+                </div>
+                <i class="ph ph-arrow-up-right text-gray-500 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all z-10"></i>
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-transparent translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-out z-0"></div>
+            </a>
+            
+        </div>
+
+        <!-- Action Buttons (Share) -->
+        <div class="mt-8 flex gap-4">
+            <button id="shareBtn" class="flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-300 hover:bg-white/10 hover:text-white transition-all backdrop-blur-md">
+                <i class="ph ph-share-network"></i>
+                Share Profile
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-xs text-gray-500">
+            <p>© 2026 PRATYUSH KUMAR. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // Avatar Slideshow Logic
+            const avatarSlides = document.querySelectorAll('.avatar-slide');
+            if (avatarSlides.length > 0) {
+                let currentSlide = 0;
+                
+                // Crossfade images every 3.5 seconds
+                setInterval(() => {
+                    // Fade out current slide
+                    avatarSlides[currentSlide].classList.remove('opacity-100');
+                    avatarSlides[currentSlide].classList.add('opacity-0');
+                    avatarSlides[currentSlide].style.zIndex = '1';
+                    
+                    // Advance to next slide
+                    currentSlide = (currentSlide + 1) % avatarSlides.length;
+                    
+                    // Fade in new slide
+                    avatarSlides[currentSlide].classList.remove('opacity-0');
+                    avatarSlides[currentSlide].classList.add('opacity-100');
+                    avatarSlides[currentSlide].style.zIndex = '3';
+                }, 3500); 
+            }
+
+            // Staggered Entry Animation for Links
+            const linkCards = document.querySelectorAll('.link-card');
+            
+            linkCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 200 + (index * 100)); // 200ms initial delay, then 100ms between each
+            });
+
+            // Share Button Functionality
+            const shareBtn = document.getElementById('shareBtn');
+            shareBtn.addEventListener('click', async () => {
+                const shareData = {
+                    title: 'My Links | Aesthetic Profile',
+                    text: 'Check out my links and creative universe!',
+                    url: window.location.href
+                };
+
+                try {
+                    if (navigator.share) {
+                        await navigator.share(shareData);
+                    } else {
+                        // Fallback to copy to clipboard
+                        const dummy = document.createElement('input');
+                        document.body.appendChild(dummy);
+                        dummy.value = window.location.href;
+                        dummy.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(dummy);
+                        
+                        // Temporary visual feedback
+                        const originalText = shareBtn.innerHTML;
+                        shareBtn.innerHTML = '<i class="ph ph-check"></i> Copied!';
+                        setTimeout(() => {
+                            shareBtn.innerHTML = originalText;
+                        }, 2000);
+                    }
+                } catch (err) {
+                    console.log('Error sharing:', err);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
